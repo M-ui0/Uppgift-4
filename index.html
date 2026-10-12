@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en"> 
+
+ <head> 
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Glassmorphism To-Do List App</title>
+     
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+     
+     <link rel="stylesheet" href="style.css">
+ </head>
+
+ 
+ <body>
+    <div class="container">
+        <div class="todo-app">
+           <h1>To-Do App</h1>
+           <div class="stat-container">
+             <div class="details">
+                 <h3>Keep it Up!</h3>
+                 <div id="progressbar">
+                     <div id="progress"></div>
+                 </div>
+             </div>
+              <div class="stat-number">
+                <p id="numbers">0 / 0</p>
+              </div>
+           </div>
+           <form class="input-area">
+             <input type="text" id="task-input" placeholder="Add a new task...">
+             <button type="submit" id="add-task-btn">
+                 <i class="fa-solid fa-plus"></i>
+             </button>
+           </form>
+           
+           <p id="message"></p>
+
+           <div class="todos-container">
+             <ul id="task-list"></ul>
+             <img class="empty-image" src="./coconut-water-coconut-milk-coffee-cartoon-coconut-0a6126b44a0e733d85609fe62c5c44d9.png" alt="empty">
+           </div>
+
+
+        </div>
+    
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@4.4.0/tsparticles.confetti.bundle.min.js"></script>
+ </body>
+
+
+</html>
