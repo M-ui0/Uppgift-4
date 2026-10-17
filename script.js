@@ -41,17 +41,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const loadTasksFromLocalStorage = () => {
         const savedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
+        tasks = savedTasks;
         savedTasks.forEach(({ text, completed}) => addTask(text, completed, false));
         toggleEmptyState();
         updateProgress();
     };
    
-
+   let tasks = [];
+    
    function addTask(text = "", completed = false, checkCompletion = true) {
         const taskText = text || taskInput.value.trim();
         if (!taskText.trim()) {
             taskInput.focus();
             return;
+        }
+       if (!text) {
+            tasks.push({ text: taskText, completed: false});
         }
 
         const li = document.createElement("li");
